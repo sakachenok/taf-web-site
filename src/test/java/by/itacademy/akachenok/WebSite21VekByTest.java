@@ -30,7 +30,7 @@ public class WebSite21VekByTest {
         WebElement buttonLoginSubmit = driver.findElement(By.xpath(webSite21VekByPage.buttonLoginSubmitLocator));
         buttonLoginSubmit.click();
 
-        WebElement errorMessageEmptyEmail = driver.findElement(By.xpath(webSite21VekByPage.errorMessageEmptyEmailLocator));
+        WebElement errorMessageEmptyEmail = driver.findElement(By.xpath(webSite21VekByPage.errorMessageEmailLocator));
         Assertions.assertEquals("Электронная почта не указана", errorMessageEmptyEmail.getText());
 
         WebElement errorMessageEmptyPassword = driver.findElement(By.xpath(webSite21VekByPage.errorMessageEmptyPasswordLocator));
@@ -97,7 +97,7 @@ public class WebSite21VekByTest {
         buttonLoginSubmit.click();
         Thread.sleep(2000);
 
-        WebElement errorMessageAccountDoesNotExist = driver.findElement(By.xpath(webSite21VekByPage.errorMessageAccountDoesNotExistLocator));
+        WebElement errorMessageAccountDoesNotExist = driver.findElement(By.xpath(webSite21VekByPage.errorMessageEmailLocator));
         Assertions.assertEquals("Нет такого аккаунта. \n" + "Зарегистрироваться?", errorMessageAccountDoesNotExist.getText());
         Thread.sleep(2000);
         driver.quit();
