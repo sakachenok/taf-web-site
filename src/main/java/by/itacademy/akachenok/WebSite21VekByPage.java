@@ -1,6 +1,6 @@
 package by.itacademy.akachenok;
 
-public class Page21VekByObjects {
+public class WebSite21VekByPage {
     public String buttonAccountLocator = "//*[@id=\"header\"]/div/div[3]/div/div[3]/div/div/div/button";
     public String buttonLoginLocator = "//*[@id=\"userToolsDropDown\"]/div/div[1]/div[2]/button";
     public String inputEmailLocator = "//*[@id=\"login-email\"]";
