@@ -12,7 +12,6 @@ public class OzTest {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://oz.by/");
-
         OzPage ozpage = new OzPage(driver);
         ozpage.clickLinkEnter();
         ozpage.clickLinkEmailLoginForm();
