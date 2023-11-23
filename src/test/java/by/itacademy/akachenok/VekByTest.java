@@ -5,14 +5,14 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class WebSite21VekByTest {
+public class VekByTest {
 
     @Test
     public void test21VekByLoginFormEmptyValues() throws InterruptedException {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://www.21vek.by/");
-        WebSite21VekByPage webSite21VekByPage = new WebSite21VekByPage(driver);
+        VekByPage webSite21VekByPage = new VekByPage(driver);
         webSite21VekByPage.clickButtonAcceptCookie();
         webSite21VekByPage.clickButtonAccount();
         webSite21VekByPage.clickButtonLogin();
@@ -29,7 +29,7 @@ public class WebSite21VekByTest {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://www.21vek.by/");
-        WebSite21VekByPage webSite21VekByPage = new WebSite21VekByPage(driver);
+        VekByPage webSite21VekByPage = new VekByPage(driver);
         webSite21VekByPage.clickButtonAcceptCookie();
         webSite21VekByPage.clickButtonAccount();
         webSite21VekByPage.clickButtonLogin();
@@ -46,7 +46,7 @@ public class WebSite21VekByTest {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://www.21vek.by/");
-        WebSite21VekByPage webSite21VekByPage = new WebSite21VekByPage(driver);
+        VekByPage webSite21VekByPage = new VekByPage(driver);
         webSite21VekByPage.clickButtonAcceptCookie();
         webSite21VekByPage.clickButtonAccount();
         webSite21VekByPage.clickButtonLogin();
