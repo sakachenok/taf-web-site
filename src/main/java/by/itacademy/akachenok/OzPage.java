@@ -4,13 +4,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class OzPage {
-    private String linkEnterLocator = "//*[@id=\"top-page\"]/header/div[1]/div/div[1]/a";
-    private String linkEmailLoginFormLocator = "//*[@id=\"loginFormLoginEmailLink\"]";
-    private String inputEmailLocator = "//*[@id=\"loginForm\"]/div[2]/div[1]/div[1]/input";
-    private String inputPasswordLocator = "//*[@id=\"loginForm\"]/div[2]/div[1]/div[2]/input";
-    private String buttonEnterLocator = "//*[@id=\"loginForm\"]/button";
-    private String errorMessageEmailDoesNotExistLocator = "//*[@id=\"test\"]/div/div";
-    private String textEnterLoginFormLocator = "//*[@id=\"loginPopupIntro\"]";
+    private String linkEnterLocator = "//span[text()='Войти']";
+    private String linkEmailLoginFormLocator = "//a[@id='loginFormLoginEmailLink']";
+    private String inputEmailLocator = "//input[@type='email']";
+    private String inputPasswordLocator = "//input[@type='password']";
+    private String buttonEnterLocator = "//button[@type='submit']";
+    private String errorMessageEmailDoesNotExistLocator = "//div[@class='i-popover__line' and text()='Адрес электронной почты не зарегистрирован. ']";
+    private String textEnterLoginFormLocator = "//p[@id='loginPopupIntro']";
     private WebDriver driver;
 
     public OzPage(WebDriver driver) {
