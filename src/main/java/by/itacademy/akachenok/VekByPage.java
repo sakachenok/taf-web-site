@@ -4,14 +4,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class VekByPage {
-    private String buttonAccountLocator = "//*[@id=\"header\"]/div/div[3]/div/div[3]/div/div/div/button";
-    private String buttonLoginLocator = "//*[@id=\"userToolsDropDown\"]/div/div[1]/div[2]/button";
-    private String inputEmailLocator = "//*[@id=\"login-email\"]";
-    private String inputPasswordLocator = "//*[@id=\"login-password\"]";
-    private String buttonLoginSubmitLocator = "//*[@id=\"default-:R2mm:-modal\"]/div/div/div[2]/div/div/form/div/div[3]/button";
-    private String errorMessageEmailLocator = "//*[@id=\"default-:R2mm:-modal\"]/div/div/div[2]/div/div/form/div/div[1]/div[3]/span[2]";
-    private String errorMessageEmptyPasswordLocator = "//*[@id=\"default-:R2mm:-modal\"]/div/div/div[2]/div/div/form/div/div[2]/div[3]/span[2]";
-    private String buttonAcceptCookieLocator = "//*[@id=\"modal-cookie\"]/div/div[2]/div/button[3]";
+    private String buttonAccountLocator = "//span[@class='userToolsText']";
+    private String buttonLoginLocator = "//button[@data-testid='loginButton']";
+    private String inputEmailLocator = "//input[@label='Электронная почта']";
+    private String inputPasswordLocator = "//input[@label='Пароль']";
+    private String buttonLoginSubmitLocator = "//button[@data-testid='loginSubmit']";
+    private String errorMessageEmailLocator = "//span[@class='ErrorMessage-module__message']";
+    private String errorMessageEmptyPasswordLocator = "//span[text()='Пароль не указан']";
+    private String buttonAcceptCookieLocator = "//button[@class='Button-module__button Button-module__blue-primary']";
     private WebDriver driver;
 
     public VekByPage(WebDriver driver) {
