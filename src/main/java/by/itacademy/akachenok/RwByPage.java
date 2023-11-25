@@ -4,14 +4,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class RwByPage {
-    private String linkPersonalAccountLocator = "/html/body/div[1]/div[1]/div[1]/div/header/div/div[3]/div[3]/ul/li[2]/a";
-    private String textAuthorizationLoginFormLocator = "//*[@id=\"auth-popup\"]/div/div/div[1]/div";
-    private String buttonSubmitLoginFormLocator = "/html/body/div[1]/div[1]/div[7]/div/div/div[2]/form/fieldset/div[3]/input";
-    private String errorMessageEmailLoginFormLocator = "//*[@id=\"login-error\"]";
-    private String errorMessagePasswordLoginFormLocator = "//*[@id=\"password-error\"]";
-    private String inputEmailLoginFormLocator = "/html/body/div[1]/div[1]/div[7]/div/div/div[2]/form/fieldset/div[1]/label/div[2]/input";
-    private String inputPasswordLoginFormLocator = "/html/body/div[1]/div[1]/div[7]/div/div/div[2]/form/fieldset/div[2]/div[1]/div/label/div[2]/input";
-    private String errorMessageWrongCredentialsLocator = "//*[@id=\"auth-popup\"]/div/div/div[2]/div[2]/div";
+    private String linkPersonalAccountLocator = "//span[text()='Личный кабинет']";
+    private String textAuthorizationLoginFormLocator = "//div[text()='Авторизация']";
+    private String buttonSubmitLoginFormLocator = "//input[@type='submit' and @value='Войти']";
+    private String errorMessageEmailLoginFormLocator = "//label[@id='login-error']";
+    private String errorMessagePasswordLoginFormLocator = "//label[@id='password-error']";
+    private String inputEmailLoginFormLocator = "//input[@name='login']";
+    private String inputPasswordLoginFormLocator = "//input[@name='password']";
+    private String errorMessageWrongCredentialsLocator = "//div[text()='Пользователь не найден']";
     private WebDriver driver;
 
     public RwByPage(WebDriver driver) {
