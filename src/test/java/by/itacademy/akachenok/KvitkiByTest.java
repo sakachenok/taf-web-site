@@ -63,7 +63,7 @@ public class KvitkiByTest {
       Thread.sleep(2000);
       kvitkiByPage.sendKeysInputEmail("test");
       kvitkiByPage.clickInputPassword();
-      Assertions.assertEquals("Пожалуйста, введите адрес электронной почты в правильном формате: name@example.com", kvitkiByPage.getTextErrorMessageEmail());
+      Assertions.assertEquals("Пожалуйста, введите адрес электронной почты в правильном формате: name@example.com", kvitkiByPage.getTextErrorMessageEmailWrongFormat());
       Thread.sleep(1000);
       driver.quit();
    }

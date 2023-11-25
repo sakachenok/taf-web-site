@@ -4,16 +4,17 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class KvitkiByPage {
-    private String buttonAcceptCookieLocator = "//*[@id=\"CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll\"]";
-    private String linkEnterLocator = "/html/body/div[3]/div[2]/div/app-user-account-link/app-profile-link/svg-icon";
-    private String textEnterLoginFormLocator = "//*[@id=\"mat-tab-label-0-0\"]/span[2]/span[1]";
-    private String inputEmailLocator = "/html/body/div[8]/div[2]/div/mat-dialog-container/div/div/app-user-auth-form/div[2]/mat-tab-group/div/mat-tab-body[1]/div/app-user-login-form/app-collapsible/div/app-form-builder/form/app-collapsible[1]/app-email-input/div/input";
-    private String inputPasswordLocator = "/html/body/div[8]/div[2]/div/mat-dialog-container/div/div/app-user-auth-form/div[2]/mat-tab-group/div/mat-tab-body[1]/div/app-user-login-form/app-collapsible/div/app-form-builder/form/app-collapsible[2]/app-password-input/div/input";
-    private String buttonEnterLoginFormLocator = "//*[@id=\"mat-tab-content-0-0\"]/div/app-user-login-form/app-collapsible/div/app-ui-button/button";
-    private String errorMessageEmailLocator = "/html/body/div[8]/div[2]/div/mat-dialog-container/div/div/app-user-auth-form/div[2]/mat-tab-group/div/mat-tab-body[1]/div/app-user-login-form/app-collapsible/div/app-form-builder/form/app-collapsible[1]/app-email-input/app-field-error/app-collapsible";
-    private String errorMessagePasswordLocator = "/html/body/div[8]/div[2]/div/mat-dialog-container/div/div/app-user-auth-form/div[2]/mat-tab-group/div/mat-tab-body[1]/div/app-user-login-form/app-collapsible/div/app-form-builder/form/app-collapsible[2]/app-password-input/app-field-error/app-collapsible";
-    private String textEmailSuggestionLocator = "/html/body/div[8]/div[2]/div/mat-dialog-container/div/div/app-user-auth-form/div[2]/mat-tab-group/div/mat-tab-body[1]/div/app-user-login-form/app-collapsible/div/app-form-builder/form/app-collapsible[1]/app-email-input/app-collapsible";
-    private String textWrongCredentialsLocator = "/html/body/div[8]/div[4]/div/mat-dialog-container/div/div/app-info-dialog-content/div[3]";
+    private String buttonAcceptCookieLocator = "//button[@id='CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll']";
+    private String linkEnterLocator = "//svg-icon [@name='user-account-link']";
+    private String textEnterLoginFormLocator = "//span [@class = 'mdc-tab__text-label' and text()='Вход']";
+    private String inputEmailLocator = "//input[@type='email']";
+    private String inputPasswordLocator = "//input[@type='password']";
+    private String buttonEnterLoginFormLocator = "//button[text()='Войти ']";
+    private String errorMessageEmailLocator = "//app-collapsible [text()='Пожалуйста, заполните поле (Эл. почта)']";
+    private String errorMessageEmailWrongFormatLocator = "//app-collapsible [text()='Пожалуйста, введите адрес электронной почты в правильном формате: name@example.com']";
+    private String errorMessagePasswordLocator = "//app-collapsible [text()='Пожалуйста, заполните поле (Пароль)']";
+    private String textEmailSuggestionLocator = "//app-collapsible [text()=' Возможно вы имели в виду  ']";
+    private String textWrongCredentialsLocator = "//div[text()='Электронная почта или пароль недействительны. Система была обновлена, и в связи с этим мы перешли на вход по электронной почте.']";
     private WebDriver driver;
 
     public KvitkiByPage(WebDriver driver) {
@@ -50,6 +51,10 @@ public class KvitkiByPage {
 
     public String getTextErrorMessageEmail() {
         return driver.findElement(By.xpath(errorMessageEmailLocator)).getText();
+    }
+
+    public String getTextErrorMessageEmailWrongFormat(){
+        return driver.findElement(By.xpath(errorMessageEmailWrongFormatLocator)).getText();
     }
 
     public String getTextErrorMessagePassword() {
