@@ -49,4 +49,5 @@ public class RwByPage {
     public String getTextErrorMessageWrongCredentials() {
         return driver.findElement(By.xpath(errorMessageWrongCredentialsLocator)).getText();
     }
+
 }
