@@ -44,4 +44,5 @@ public class OzPage {
     public String getTextEnterLoginForm() {
         return driver.findElement(By.xpath(textEnterLoginFormLocator)).getText();
     }
+
 }
