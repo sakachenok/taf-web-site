@@ -15,6 +15,7 @@ public class KvitkiByPage {
     private String errorMessagePasswordLocator = "//app-collapsible [text()='Пожалуйста, заполните поле (Пароль)']";
     private String textEmailSuggestionLocator = "//app-collapsible [text()=' Возможно вы имели в виду  ']";
     private String textWrongCredentialsLocator = "//div[text()='Электронная почта или пароль недействительны. Система была обновлена, и в связи с этим мы перешли на вход по электронной почте.']";
+    private String buttonCloseCircusBannerLocator = "//div [@class='popupbanner_close']";
     private WebDriver driver;
 
     public KvitkiByPage(WebDriver driver) {
@@ -23,6 +24,10 @@ public class KvitkiByPage {
 
     public void clickButtonAcceptCookie() {
         driver.findElement(By.xpath(buttonAcceptCookieLocator)).click();
+    }
+
+    public void clickButtonCloseCircusBanner() {
+        driver.findElement(By.xpath(buttonCloseCircusBannerLocator)).click();
     }
 
     public void clickLinkEnter() {
@@ -45,7 +50,7 @@ public class KvitkiByPage {
         driver.findElement(By.xpath(inputPasswordLocator)).click();
     }
 
-    public void sendKeysInputPassword(String NewPassword){
+    public void sendKeysInputPassword(String NewPassword) {
         driver.findElement(By.xpath(inputPasswordLocator)).sendKeys(NewPassword);
     }
 
@@ -53,7 +58,7 @@ public class KvitkiByPage {
         return driver.findElement(By.xpath(errorMessageEmailLocator)).getText();
     }
 
-    public String getTextErrorMessageEmailWrongFormat(){
+    public String getTextErrorMessageEmailWrongFormat() {
         return driver.findElement(By.xpath(errorMessageEmailWrongFormatLocator)).getText();
     }
 
@@ -65,11 +70,12 @@ public class KvitkiByPage {
         return driver.findElement(By.xpath(textEmailSuggestionLocator)).getText();
     }
 
-    public String getTextWrongCredentials(){
+    public String getTextWrongCredentials() {
         return driver.findElement(By.xpath(textWrongCredentialsLocator)).getText();
     }
 
-    public void clickButtonEnterLoginForm(){
+    public void clickButtonEnterLoginForm() {
         driver.findElement(By.xpath(buttonEnterLoginFormLocator)).click();
     }
+
 }
