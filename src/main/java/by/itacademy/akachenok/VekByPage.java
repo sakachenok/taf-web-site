@@ -49,4 +49,5 @@ public class VekByPage {
     public void clickButtonAcceptCookie() {
         driver.findElement(By.xpath(buttonAcceptCookieLocator)).click();
     }
+
 }
