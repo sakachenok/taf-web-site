@@ -5,10 +5,10 @@ import org.openqa.selenium.WebDriver;
 
 public class PizzaTempoPage {
     private String linkPizza = "//img[@alt='Пицца']";
-    private String buttonOrderMargaritaMainPage = "//*[@id=\"1\"]/div/div[2]/div[3]/div[3]/button/span/span";
+    private String buttonOrderMargaritaMainPage = "//*[@id='1']/div/div[2]/div[3]/div[3]/button/span/span";
     private String buttonOrderMargaritaPopUp = "//button[text()='Заказ']";
-    private String linkCartMainPage = "//a[@href=\"https://www.pizzatempo.by/menu/order/\"]";
-    private String textPizzaMargaritaCart = "//*[@id=\"basket_expand\"]/table/tbody/tr[1]/td[2]/div[1]";
+    private String linkCartMainPage = "//a[@href='https://www.pizzatempo.by/menu/order/']";
+    private String textPizzaMargaritaCart = "//*[@id='basket_expand']/table/tbody/tr[1]/td[2]/div[1]";
     private WebDriver driver;
 
     public PizzaTempoPage(WebDriver driver) {
